@@ -1,2 +1,36 @@
-@header-height:50px;
+@header-height: 50px;
 
+.el-scrollbar__wrap {
+  overflow-x: hidden !important
+}
+
+.el-menu {
+  border: 0 !important;
+  .el-menu-item, .el-submenu__title {
+    height: 40px;
+    line-height: 40px;
+  }
+}
+
+
+.flex {
+  display: flex;
+}
+
+.flex_col {
+  .flex;
+  flex-direction: column;
+}
+
+.flex_box_full {
+  flex-grow: 1;
+  flex-shrink: 1;
+}
+
+.abo_full {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}

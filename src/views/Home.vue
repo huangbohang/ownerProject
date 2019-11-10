@@ -1,48 +1,65 @@
 <template>
-  <div class="container col">
-<!--    <Nav class="nav"/>-->
-    <Header class="header"/>
-    <Main class="main"/>
-  </div>
+    <div class="container flex_col">
+        <Header class="header"/>
+        <main class="flex_box_full">
+            <Nav class="nav"/>
+            <Main class="main flex_box_full"/>
+        </main>
+<!--        <Sky class="sky"/>-->
+    </div>
 </template>
 
 <script>
-import Header from './Head/Header'
-import Nav from './Nav'
-import Main from './Main'
-export default {
-  name: 'home',
-  components: { Nav ,Main,Header}
-}
+    import Header from './Head/Header'
+    import Nav from './Nav'
+    import Main from './Main'
+    import Sky from './pages/Sky.vue'
+
+    export default {
+        name: 'home',
+        components: {Sky, Nav, Main, Header}
+    }
 </script>
 <style scoped lang="less">
-    @header-height:50px;
-  .container{
-    display: flex;
-    width: 1200px;
-    margin: auto;
-    height: 100%;
-  }
-  .col{
-      flex-direction: column;
-    .header{
-      height: @header-height;
-      width: 100%;
-      line-height: @header-height;
+    @header-height: 60px;
+    @OPACITY:1;
+    .opa{
+        opacity: @OPACITY;
     }
-    .main{
-      height: calc(100%- @header-height);
-      width: 100%;
+    .container {
+        height: 100%;
+        width: 100%;
+        .header {
+            .opa;
+            height: @header-height;
+            line-height: @header-height;
+        }
+
+        main {
+            .opa;
+            display: flex;
+
+            > * {
+                height: 100%;
+                overflow: hidden;
+            }
+
+            .nav {
+                width: 220px;
+            }
+
+            .main {
+                padding: 10px;
+                flex: 1;
+            }
+        }
+        .sky{
+            position: fixed;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            z-index: -1;
+        }
     }
-  }
-  .row{
-    .nav{
-      width: 20%;
-      height: 100%;
-    }
-    .main{
-      width: 80%;
-      height: 100%;
-    }
-  }
 </style>

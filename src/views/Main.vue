@@ -1,14 +1,11 @@
 <template>
     <div class="main">
-<!--        <Sky class="sky"/>-->
     </div>
 </template>
 
 <script>
-    import Sky from './pages/Sky'
   export default {
     name: 'Main',
-    components:{Sky},
     data () {
       return {}
     },
@@ -19,8 +16,9 @@
   }
 </script>
 <style scoped lang="less">
-        .sky{
-            width: 100%;
-            height: 100%;
-        }
+    .main{
+        border: 1px solid #333333;
+        background: #333333;
+    }
+
 </style>
