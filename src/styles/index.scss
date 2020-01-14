@@ -58,8 +58,28 @@ div:focus {
     height: 0;
   }
 }
+.center{
+  text-align: center;
+}
 
 // main-container global css
 .app-container {
   padding: 20px;
+}
+.full-container{
+  @extend .app-container;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+.full-container-row{
+  @extend .full-container;
+  display: flex;
+}
+.full-container-column{
+  @extend .full-container;
+  display: flex;
+  flex-direction: column;
 }

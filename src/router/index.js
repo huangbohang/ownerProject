@@ -53,14 +53,14 @@ export const constantRoutes = [
   },
 
   {
-    path: '/form',
+    path: '/md',
     component: Layout,
     children: [
       {
         path: 'index',
-        name: 'Form',
-        component: () => import('@/views/form/index'),
-        meta: { title: 'Form', icon: 'form' }
+        name: 'Markdown',
+        component: () => import('@/views/markdown/index'),
+        meta: { title: '文档编辑', icon: 'form' }
       }
     ]
   },
