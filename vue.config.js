@@ -39,6 +39,13 @@ module.exports = {
     proxy: {
       // change xxx-api/login => mock/login
       // detail: https://cli.vuejs.org/config/#devserver-proxy
+      '/api': {
+        // target: 'http://192.168.11.185:8081/platform/separate',
+        target: process.env.VUE_APP_DEV_TARGET,
+        pathRewrite: { '^/api': '' },
+        secure: false, // 接受 运行在 https 上的服务
+        changeOrigin: true
+      },
       [process.env.VUE_APP_BASE_API]: {
         target: `http://127.0.0.1:${port}/mock`,
         changeOrigin: true,

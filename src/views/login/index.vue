@@ -196,7 +196,7 @@ export default {
 
 <style scoped lang="scss">
   .BCK-COLOR{
-    background: url('http://hbimg.b0.upaiyun.com/9102f0010ca86a3124e16c6dec91a45c0650129c23ea4-l6mWuX_fw658') no-repeat 50%;
+    background: url('../../assets/image/bk.jpg') no-repeat 50%;
     background-size: 100% 100%;
     /*background: radial-gradient(circle, white, lightblue);*/
   }

@@ -3,11 +3,17 @@ $menuText: #bfcbd9;
 $menuActiveText: #409EFF;
 $subMenuActiveText: #f4f4f5; //https://github.com/ElemeFE/element/issues/12951
 
-$menuBg: #304156;
+//$menuBg: #304156;
+$menuBg:#001529;
 $menuHover: #263445;
 
-$subMenuBg: #1f2d3d;
-$subMenuHover: #001528;
+//$subMenuBg: #1f2d3d;
+$subMenuBg: #001529;
+//$subMenuHover: #001528;
+$subMenuHover: #263445;
+
+//$fixHeaderBg: white;
+$fixHeaderBg: #011a2c;
 
 $sideBarWidth: 210px;
 
@@ -25,4 +31,5 @@ $paddingDistance: 20px;
   subMenuHover: $subMenuHover;
   sideBarWidth: $sideBarWidth;
   paddingDistance: $paddingDistance;
+  fixHeaderBg: $fixHeaderBg
 }

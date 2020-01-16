@@ -21,15 +21,40 @@ export const constantRoutes = [
   {
     path: '/',
     component: Layout,
-    redirect: '/dashboard',
+    redirect: '/homepage',
     children: [{
-      path: 'dashboard',
-      name: 'Dashboard',
-      component: () => import('@/views/dashboard/index'),
-      meta: { title: 'Dashboard', icon: 'dashboard' }
+      path: 'homepage',
+      name: 'Homepage',
+      component: () => import('@/views/homepage/index'),
+      meta: { title: '主页', icon: 'dashboard' }
     }]
   },
-
+  {
+    path: '/md',
+    component: Layout,
+    children: [
+      {
+        path: 'list',
+        name: 'Markdown',
+        component: () => import('@/views/markdown/list'),
+        meta: { title: '我的文档', icon: 'form' }
+      },
+      {
+        path: 'index',
+        name: 'Markdown',
+        component: () => import('@/views/markdown/index'),
+        meta: { title: '文档编辑', icon: 'form' },
+        hidden: true
+      },
+      {
+        path: 'index',
+        name: 'Markdown',
+        component: () => import('@/views/markdown/index'),
+        meta: { title: '文档编辑', icon: 'form' },
+        hidden: true
+      }
+    ]
+  },
   {
     path: '/example',
     component: Layout,
@@ -48,19 +73,6 @@ export const constantRoutes = [
         name: 'Tree',
         component: () => import('@/views/tree/index'),
         meta: { title: 'Tree', icon: 'tree' }
-      }
-    ]
-  },
-
-  {
-    path: '/md',
-    component: Layout,
-    children: [
-      {
-        path: 'index',
-        name: 'Markdown',
-        component: () => import('@/views/markdown/index'),
-        meta: { title: '文档编辑', icon: 'form' }
       }
     ]
   },

@@ -32,6 +32,7 @@ export default {
 
 <style scoped>
 .hamburger {
+  background: rgba(255,255,255,.7);
   display: inline-block;
   vertical-align: middle;
   width: 20px;
